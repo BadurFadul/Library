@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Library.src.Library
 {
-    public class Book
+    public abstract class Book
     {
         private string _title = String.Empty;
         private string _author = String.Empty;
@@ -27,6 +27,11 @@ namespace Library.src.Library
             _publicationYear = publicationyear;
             CanBorrow = canborrow;
             CanPrint = canprint;
+        }
+
+        public virtual void PrintInfo()
+        {
+            Console.Write($"Title: {Title}; Author: {Author}; ISBN: {ISBN}; Publication Year: {PublicationYear}; Can Borrow: {CanBorrow}; Can Print: {CanPrint}");
         }
 
     }

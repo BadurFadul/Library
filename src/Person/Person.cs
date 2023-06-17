@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Library.src.Library
 {
-    public class Person
+    public abstract class Person
     {
         private int _id;
 
